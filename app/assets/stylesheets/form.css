@@ -1,0 +1,14 @@
+.form_text_area, form_text_field{
+    border: 1px solid #d0d0d0;
+    padding: 7.5px 10px;
+}
+
+.form_text_area:focus, .form_text_field:focus{
+    background-color: #E7EFED;
+    outline-width: 0px;
+}
+
+.form_text_area{
+    box-sizing: border-box;
+    width: 100%;
+}
