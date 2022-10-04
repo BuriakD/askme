@@ -1,11 +1,20 @@
 <div class="container">
-  <h2 class="title-lg mb-md">Questions</h2>
+
+  <p class="mt-md">
+    <%=render 'form', question:@question %>
+  </p>
+</div>
+
+  <div class="container mt-sm">
+    <h2 class="title-lg">All questions</h2>
+  </div>
 
   <% @questions.each do |question| %>
-    <p class="mb-sm"><%= link_to "Question #{question.id}", question_path(question.id) %></p>
-  <% end %>
-
+    <div class="container mt-sm">
+      <%= render question%>
+    </div>
+  <%end%>
   <p class="mt-md">
     <%= link_to "Create new question", new_question_path, class:  'button button-main' %>
   </p>
-</div>
+

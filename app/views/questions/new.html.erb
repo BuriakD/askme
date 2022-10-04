@@ -1,13 +1,7 @@
 <div class="container">
-  <%= form_with model: @question do |form| %>
-      <h1 class="title-lg, mb-md"> <%= form.label :body, 'Create question' %> </h1>
 
-      <p> <%= form.text_area :body, rows:5, class: 'form_text_area'%> </p>
+  <h1 class="title-lg mb-md">Create question</h1>
 
-      <h1 class="mt-md"> <%= form.label :user_id%> </h1>
+  <%= render 'form', question:@question %>
 
-      <p> <%= form.text_field :user_id, class:'form_text_field'%> </p>
-
-      <p class="mt-md"> <%= form.submit 'Create', class:  'button button-main'%> </p>
-    <% end %>
-  </div>
+</div>

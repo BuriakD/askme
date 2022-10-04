@@ -1,12 +1,4 @@
 <div class="container">
-  <h1 class="title-lg mt-md">Question <%= @question.id%> </h1>
-  <p class="mb-sm"><%= @question.body %></p>
-  <p>User_id: <%= @question.user_id%></p>
-
-  <div class="mt-md">
-    <%= link_to fa_icon('pencil'), edit_question_path, title: 'Update question' %>
-    <%= button_to fa_icon('trash-o'), question_path(@question), method: :delete, title: 'Delete question' %>
-  </div>
-
-  <p class="mt-md"><%= link_to 'All questions', questions_path, class:  'button button-main'%></p>
+  <%= render 'question', question:@question %>
+  <p class="mt-md"><%= link_to "All question", questions_path %></p>
 </div>

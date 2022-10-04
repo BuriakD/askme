@@ -1,0 +1,12 @@
+<p class="mb-sm"><%= question.body %></p>
+<div class="text-sm footer_question">
+  <div class="text_grey">
+    <%= l(question.created_at, format: :short) %>
+  </div>
+
+  <div>
+    <%= link_to fa_icon('pencil'), edit_question_path(question), title: 'Update question' %>
+    <%= button_to fa_icon('trash-o'), question_path(question), method: :delete, title: 'Delete question' %>
+  </div>
+</div>
+

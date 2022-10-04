@@ -1,0 +1,12 @@
+<%= form_with model: question do |form| %>
+
+  <h1 class="mt-md"> Question text </h1>
+
+  <p> <%= form.text_area :body, rows:5, class: 'form_text_area'%> </p>
+
+  <h1 class="mt-md"> <%= form.label :user_id%> </h1>
+
+  <p> <%= form.text_field :user_id, class:'form_text_field'%> </p>
+
+  <p class="mt-md"> <%= form.submit 'Save quesiton', class:  'button button-main'%> </p>
+<% end %>
